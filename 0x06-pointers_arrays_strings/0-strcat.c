@@ -1,18 +1,28 @@
 #include "main.h"
 
 /**
- * description
- * Return
+ * *_strcat - The function that prints out the conactenation of strings
+ * @dest: First parameter
+ * @src: second parameter
+ *
+ * Return: Concatenated strings
  */
-char *_strncat(char *dest, char *src, int n)
+
+char *_strcat(char *dest, char *src)
 {
-	int index = 0, dest_len = 0;
+	int length, j;
 
-	while (dest[index++])
-		dest_len++;
+	length = 0;
 
-	for (index = 0; src[index] && index < n; index++)
-		dest[dest_len++] = src[index];
+	while (dest[length] != '\0')
+	{
+		length++;
+	}
+	for (j = 0; src[j] != '\0'; j++)
+	{
+		dest[length] = src[j];
+	}
+	dest[length] = '\0';
 
 	return (dest);
 }
