@@ -3,7 +3,8 @@
 
 /**
  * _puts_recursion - The function that will a string following a newline
- * *s: The string that will be printed
+ * @*s: The string that will be printed
+ * @s: The string that will be printed
  *
  * Return: Always 0
  */
@@ -14,5 +15,5 @@ void _puts_recursion(char *s)
 		return;
 	}
 	printf("%c", *s);
-	_puts_recursion(*s + 1);
+	_puts_recursion(s + 1);
 }
